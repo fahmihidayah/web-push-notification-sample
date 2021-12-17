@@ -55,6 +55,7 @@ def send_message_view(request):
 
             result = push_notification.notify_single_device(registration_id=device_token.token,message_body=message, message_title=title)
 
+
             return JsonResponse(data={
                 'title' : title,
                 'message': message,
